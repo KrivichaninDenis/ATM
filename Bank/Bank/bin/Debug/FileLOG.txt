@@ -1,0 +1,14 @@
+2015-04-16 09:01:38,057  [DEBUG] Bank.Program  - Start Bank Process
+2015-04-16 09:01:40,313  [ERROR] Bank.Algorithm  - Exception WantMoreThanHave
+
+2015-04-16 09:01:42,455  [ERROR] Bank.Algorithm  - Exception IncorrectInput
+
+2015-04-16 09:01:42,455  [INFO] Bank.Algorithm  - AllOk:Successfully issued 0
+
+2015-04-16 09:01:46,930  [INFO] Bank.Algorithm  - AllOk:Successfully issued 200
+
+2015-04-16 09:01:49,353  [INFO] Bank.Algorithm  - AllOk:Successfully issued 150
+
+2015-04-16 09:01:52,268  [INFO] Bank.Algorithm  - AllOk:Successfully issued 20
+
+2015-04-16 09:01:52,268  [DEBUG] Bank.Program  - End Bank Process

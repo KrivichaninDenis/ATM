@@ -3,42 +3,44 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using log4net;
 
 namespace Bank
 {
    public class Algorithm
     {
+       public static readonly ILog log = LogManager.GetLogger(typeof(Algorithm));
         public  void GiveMoney(List<Money> AllMoney, StateOpeartion State)
        {
 
          
                while (MaxMoney(AllMoney) != 0)
                {
-                   int InputMoney=0;
-                   Console.WriteLine("Input money: ");
-
-                  try
-                  {
+                   int InputMoney = 0;
+                   try
+                   {                       
+                      Console.WriteLine("Input money: ");                  
                       InputMoney = int.Parse(Console.ReadLine());                       
                   }
                    catch
                   {
-                       State = StateOpeartion.IncorrectInput;
+                        State = StateOpeartion.IncorrectInput;
                         Console.WriteLine("Exception "+State.ToString()+"\n");
-                        break;
+                        log.Error("Exception " + State.ToString() + "\n");
+                       
                   }
 
                   if (InputMoney > MaxMoney(AllMoney))
                   {
-                      State = StateOpeartion.WantMoreThanHave;
-               Console.WriteLine("Exception " + State.ToString() + "\n");
-                      
+                        State = StateOpeartion.WantMoreThanHave;
+                        Console.WriteLine("Exception " + State.ToString() + "\n");
+                        log.Error("Exception " + State.ToString() + "\n");
                   }
                    else
                    {
                        List<int> AllgiveMoney = new List<int>();
 
-
+                       int CopyImputmoney = InputMoney; 
                        int CountOfmoney = 0;
                        int sum = 0;
                        for (int i = 0; i < AllMoney.Count; i++)
@@ -65,13 +67,14 @@ namespace Bank
                        if (InputMoney == 0 /*&& CountOfmoney <= 15*/)
                        {
                            State = StateOpeartion.AllOk;
-                           Console.WriteLine(State.ToString()+":Successfully issued:)\n");
-
+                           Console.WriteLine(State.ToString()+":Successfully issued "+CopyImputmoney+"\n");
+                           log.Info(State.ToString() + ":Successfully issued " + CopyImputmoney + "\n");
                        }
                        else
                        {
                            State = StateOpeartion.CanNotGiveThisCombination;
                            Console.WriteLine("Exception " + State.ToString() + "\n");
+                           log.Error("Exception " + State.ToString() + "\n");
                            ReturnMoney(AllgiveMoney, AllMoney);
                        }
                    }

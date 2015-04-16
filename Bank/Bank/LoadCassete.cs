@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using log4net;
 
 namespace Bank
 {
     public class LoadCassete
     {
+        public static readonly ILog log = LogManager.GetLogger(typeof(LoadCassete));
         StateOpeartion State;
         public List<Money> ReadAllMoney(List<Money> AllMoney, StateOpeartion StateBank)
         {
@@ -37,6 +39,7 @@ namespace Bank
             {
                 State = StateOpeartion.CasseteProblem;
                 Console.WriteLine("Exception " + State.ToString() + "\n");
+                log.Fatal("Exception " + State.ToString() + "\n");
             }
             Output(AllMoney, State);
             
@@ -49,9 +52,10 @@ namespace Bank
             {
                 State = StateOpeartion.NoMoneyToShow;
                 Console.WriteLine("Exception " + State.ToString() + "\n");
+                log.Error("Exception " + State.ToString() + "\n");
             }
             else
-                foreach (Money M1 in AllMoney)
+                foreach (Money M1 in AllMoney) 
                 {
                     Console.WriteLine("Money Value: " + M1.MoneyValue + " Money Count: " + M1.MoneyCount + "\n");
                 }
