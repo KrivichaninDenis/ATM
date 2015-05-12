@@ -1,107 +1,58 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using log4net;
 
 namespace Bank
 {
    public class Algorithm
     {
-       public static readonly ILog log = LogManager.GetLogger(typeof(Algorithm));
-        public  void GiveMoney(List<Money> AllMoney, StateOpeartion State)
+       public static readonly ILog Log = LogManager.GetLogger(typeof(Algorithm));
+       public    List<int> AllgiveMoney = new List<int>();
+        public  int GiveMoney(List<Money> allMoney,out StateOpeartion state,int inputMoney)
        {
+            state=StateOpeartion.AllOk;
+            var countOfmoney=0;            
 
-         
-               while (MaxMoney(AllMoney) != 0)
-               {
-                   int InputMoney = 0;
-                   try
-                   {                       
-                      Console.WriteLine("Input money: ");                  
-                      InputMoney = int.Parse(Console.ReadLine());                       
-                  }
-                   catch
+            if (inputMoney > MaxMoney(allMoney) )
                   {
-                        State = StateOpeartion.IncorrectInput;
-                        Console.WriteLine("Exception "+State.ToString()+"\n");
-                        log.Error("Exception " + State.ToString() + "\n");
-                       
-                  }
-
-                  if (InputMoney > MaxMoney(AllMoney))
-                  {
-                        State = StateOpeartion.WantMoreThanHave;
-                        Console.WriteLine("Exception " + State.ToString() + "\n");
-                        log.Error("Exception " + State.ToString() + "\n");
+                        state = StateOpeartion.WantMoreThanHave;                                                
                   }
                    else
                    {
-                       List<int> AllgiveMoney = new List<int>();
-
-                       int CopyImputmoney = InputMoney; 
-                       int CountOfmoney = 0;
-                       int sum = 0;
-                       for (int i = 0; i < AllMoney.Count; i++)
+                       foreach (Money oneElement in allMoney)
                        {
                            while (
-                                   InputMoney >= AllMoney[i].MoneyValue &&
-                                   (InputMoney - AllMoney[i].MoneyValue == 0 || InputMoney - AllMoney[i].MoneyValue >= AllMoney[AllMoney.Count - 1].MoneyValue)
-                                  )
+                               inputMoney >= oneElement.MoneyValue &&
+                               (inputMoney - oneElement.MoneyValue == 0 || inputMoney - oneElement.MoneyValue >= allMoney[allMoney.Count - 1].MoneyValue)
+                               )
                            {
-                               if (AllMoney[i].MoneyCount > 0)
+                               if (oneElement.MoneyCount > 0)
                                {
-                                   AllMoney[i].MoneyCount--;
-                                   AllgiveMoney.Add(AllMoney[i].MoneyValue);
-                                   CountOfmoney++;
-                                   InputMoney -= AllMoney[i].MoneyValue;
-                                   sum += AllMoney[i].MoneyValue;
-
+                                   oneElement.MoneyCount--;
+                                   AllgiveMoney.Add(oneElement.MoneyValue);
+                                   countOfmoney++;
+                                   inputMoney -= oneElement.MoneyValue;
                                }
                                else { break; }
                            }
                        }
-
-
-                       if (InputMoney == 0 /*&& CountOfmoney <= 15*/)
-                       {
-                           State = StateOpeartion.AllOk;
-                           Console.WriteLine(State.ToString()+":Successfully issued "+CopyImputmoney+"\n");
-                           log.Info(State.ToString() + ":Successfully issued " + CopyImputmoney + "\n");
-                       }
-                       else
-                       {
-                           State = StateOpeartion.CanNotGiveThisCombination;
-                           Console.WriteLine("Exception " + State.ToString() + "\n");
-                           log.Error("Exception " + State.ToString() + "\n");
-                           ReturnMoney(AllgiveMoney, AllMoney);
-                       }
                    }
-               }                     
-               State = StateOpeartion.NoMoneyToGive;              
-               Console.WriteLine("Exception "+State.ToString()+"\n");                       
-        }
+
+            return inputMoney;
+       }
             
-        public  void ReturnMoney(List<int> ReturnList,List<Money> AllMoney)
+        public  void ReturnMoney(List<int> returnList,List<Money> allMoney)
         {
-            foreach (int Value in ReturnList)
+            foreach (int value in returnList)
             {
-                int index = AllMoney.FindIndex(m => m.MoneyValue == Value);
-                AllMoney[index].MoneyCount++;
+                int index = allMoney.FindIndex(m => m.MoneyValue == value);
+                allMoney[index].MoneyCount++;
             }
         }
 
-        public  int MaxMoney(List<Money> AllMoney)
+        public  int MaxMoney(List<Money> allMoney)
         {
-            int MaxMoney = 0;
-            foreach (Money M1 in AllMoney)
-            {
-                MaxMoney += M1.MoneyValue * M1.MoneyCount;
-            }
-            //Console.WriteLine("\nMaxMoney: " + MaxMoney + "\n");
-            return MaxMoney;
+            return allMoney.Sum(m1 => m1.MoneyValue*m1.MoneyCount);
         }
-
-}
+    }
 }

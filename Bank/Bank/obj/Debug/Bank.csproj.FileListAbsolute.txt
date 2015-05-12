@@ -1,7 +1,9 @@
-C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\Bank\bin\Debug\Bank.exe.config
-C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\Bank\bin\Debug\Bank.exe
 C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\Bank\bin\Debug\Bank.pdb
-C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\Bank\obj\Debug\Bank.exe
 C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\Bank\obj\Debug\Bank.pdb
 C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\Bank\obj\Debug\Bank.csprojResolveAssemblyReference.cache
 C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\Bank\bin\Debug\log4net.dll
+C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\Bank\obj\Debug\Bank.csproj.GenerateResource.Cache
+C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\Bank\obj\Debug\Bank.Lang.Rus.resources
+C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\Bank\bin\Debug\Bank.dll.config
+C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\Bank\bin\Debug\Bank.dll
+C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\Bank\obj\Debug\Bank.dll

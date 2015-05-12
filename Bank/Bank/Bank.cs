@@ -1,26 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Bank
 {
    public class Bank
     {
-       List<Money> AllCassete = new List<Money>();
+      public List<Money> AllCassete = new List<Money>();
 
        
        
-       public void ReadCassete(LoadCassete LoadCs, StateOpeartion State)
+       public void ReadCassete(LoadCassete loadCs, StateOpeartion state)
        {           
-           this.AllCassete = LoadCs.ReadAllMoney(this.AllCassete, State);
-           
+           AllCassete = loadCs.ReadAllMoney(AllCassete, state);           
        }
 
-       public void GiveClientMoney(Algorithm AlgToGive,StateOpeartion State)
+       public int GiveClientMoney(Algorithm algToGive,out StateOpeartion state, int inputMoney)
        {
-           AlgToGive.GiveMoney(this.AllCassete, State);
+         return  algToGive.GiveMoney(AllCassete, out state,inputMoney);
 
        }
     }

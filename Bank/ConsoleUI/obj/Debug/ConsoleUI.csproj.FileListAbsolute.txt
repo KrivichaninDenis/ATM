@@ -1,0 +1,9 @@
+C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\ConsoleUI\bin\Debug\ConsoleUI.exe.config
+C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\ConsoleUI\bin\Debug\ConsoleUI.exe
+C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\ConsoleUI\bin\Debug\ConsoleUI.pdb
+C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\ConsoleUI\bin\Debug\Bank.dll
+C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\ConsoleUI\bin\Debug\log4net.dll
+C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\ConsoleUI\bin\Debug\Bank.pdb
+C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\ConsoleUI\obj\Debug\ConsoleUI.csprojResolveAssemblyReference.cache
+C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\ConsoleUI\obj\Debug\ConsoleUI.exe
+C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\ConsoleUI\obj\Debug\ConsoleUI.pdb

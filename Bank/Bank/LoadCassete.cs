@@ -1,68 +1,51 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using log4net;
 
 namespace Bank
 {
     public class LoadCassete
     {
-        public static readonly ILog log = LogManager.GetLogger(typeof(LoadCassete));
-        StateOpeartion State;
-        public List<Money> ReadAllMoney(List<Money> AllMoney, StateOpeartion StateBank)
+        public static readonly ILog Log = LogManager.GetLogger(typeof(LoadCassete));
+        StateOpeartion _state;
+        public List<Money> ReadAllMoney(List<Money> allMoney, StateOpeartion stateBank)
         {
-            State = StateBank;
-            System.IO.StreamReader file = new System.IO.StreamReader("C:/Users/Кривичанин/Documents/Visual Studio 2012/Projects/Bank/MoneyFile.txt");
+            _state = stateBank;
+            var file = new StreamReader("C:/Users/Кривичанин/Documents/Visual Studio 2012/Projects/Bank/MoneyFile.txt");
 
-            string Element = string.Empty;
             try
             {
-                
-                while ((Element = file.ReadLine()) != null)
+                string element;
+                while ((element = file.ReadLine()) != null)
                 {
 
-                    string[] split = Element.Split(new Char[] { ' ', '\t' });
+                    var split = element.Split(new char[] { ' ', '\t' });
 
-                    Money M1 = new Money();
+                    var m1 = new Money
+                    {
+                        MoneyValue = int.Parse(split[0]),
+                        MoneyCount = int.Parse(split[1])
+                    };
 
-                    M1.MoneyValue = int.Parse(split[0]);
-                    M1.MoneyCount = int.Parse(split[1]);
 
-                    AllMoney.Add(M1);
-                    Element = string.Empty;
+                    allMoney.Add(m1);
                 }
-                AllMoney.Sort((A, B) => B.MoneyValue.CompareTo(A.MoneyValue));
+                allMoney.Sort((a, B) => B.MoneyValue.CompareTo(a.MoneyValue));
             }
             catch
             {
-                State = StateOpeartion.CasseteProblem;
-                Console.WriteLine("Exception " + State.ToString() + "\n");
-                log.Fatal("Exception " + State.ToString() + "\n");
+                _state = StateOpeartion.CasseteProblem;               
             }
-            Output(AllMoney, State);
+           
             
-            return AllMoney;
+            return allMoney;
         }
 
-        public void Output(List<Money> AllMoney, StateOpeartion State)
-        {
-            if (CheckState()!=StateOpeartion.AllOk)
-            {
-                State = StateOpeartion.NoMoneyToShow;
-                Console.WriteLine("Exception " + State.ToString() + "\n");
-                log.Error("Exception " + State.ToString() + "\n");
-            }
-            else
-                foreach (Money M1 in AllMoney) 
-                {
-                    Console.WriteLine("Money Value: " + M1.MoneyValue + " Money Count: " + M1.MoneyCount + "\n");
-                }
-        }
+       
         public StateOpeartion CheckState()
         {
-            return State;
+            return _state;
         }
     }
 }

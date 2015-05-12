@@ -1,0 +1,7 @@
+2015-05-12 18:02:42,458  [DEBUG] ConsoleUI.Program  - Start Bank Process
+2015-05-12 18:02:44,334  [ERROR] ConsoleUI.Program  -  Error: WantMoreThanHave (500)
+2015-05-12 18:02:48,145  [INFO] ConsoleUI.Program  - Successfully issued: 300
+2015-05-12 18:02:50,974  [INFO] ConsoleUI.Program  - Successfully issued: 70
+2015-05-12 18:02:50,974  [ERROR] ConsoleUI.Program  - Exception NoMoneyToGive
+
+2015-05-12 18:02:50,974  [DEBUG] ConsoleUI.Program  - End Bank Process

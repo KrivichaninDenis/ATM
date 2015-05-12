@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank", "Bank\Bank.csproj", "{A3755193-8BE9-4E6D-B6D8-C1D6B216290D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "Bank\Library.csproj", "{A3755193-8BE9-4E6D-B6D8-C1D6B216290D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormATM", "WindowsFormATM\WindowsFormATM.csproj", "{2DE53654-6D06-445D-8A4F-43B4F45EC72E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "ConsoleUI\ConsoleUI.csproj", "{C0990DA5-E624-4F3E-8445-D199511AFEE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,14 @@ Global
 		{A3755193-8BE9-4E6D-B6D8-C1D6B216290D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3755193-8BE9-4E6D-B6D8-C1D6B216290D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3755193-8BE9-4E6D-B6D8-C1D6B216290D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DE53654-6D06-445D-8A4F-43B4F45EC72E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DE53654-6D06-445D-8A4F-43B4F45EC72E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DE53654-6D06-445D-8A4F-43B4F45EC72E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DE53654-6D06-445D-8A4F-43B4F45EC72E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0990DA5-E624-4F3E-8445-D199511AFEE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0990DA5-E624-4F3E-8445-D199511AFEE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0990DA5-E624-4F3E-8445-D199511AFEE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0990DA5-E624-4F3E-8445-D199511AFEE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
