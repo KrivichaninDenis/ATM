@@ -10,7 +10,7 @@ namespace Bank
        
        public void ReadCassete(LoadCassete loadCs, StateOpeartion state)
        {           
-           AllCassete = loadCs.ReadAllMoney(AllCassete, state);           
+           AllCassete = loadCs.TxtReader(AllCassete, state);           
        }
 
        public int GiveClientMoney(Algorithm algToGive,out StateOpeartion state, int inputMoney)

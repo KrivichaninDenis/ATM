@@ -117,6 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AllOk" xml:space="preserve">
+    <value>All Ok </value>
+  </data>
+  <data name="CanNotGiveThisCombination" xml:space="preserve">
+    <value>Невозможно выдать данную сумму</value>
+  </data>
+  <data name="CasseteProblem" xml:space="preserve">
+    <value>Проблема с загрузкой кассет </value>
+  </data>
+  <data name="CassettesSuccessfullyCleared" xml:space="preserve">
+    <value> Кассеты успешно очищены</value>
+  </data>
+  <data name="CassettesSuccessfullyLoaded" xml:space="preserve">
+    <value> Кассеты успешно загружены</value>
+  </data>
   <data name="Clear" xml:space="preserve">
     <value>Очистить</value>
   </data>
@@ -126,10 +141,37 @@
   <data name="ClearCassete" xml:space="preserve">
     <value>Очистить кассеты</value>
   </data>
+  <data name="EndBankProcess" xml:space="preserve">
+    <value>Завершение работы с банкоматом</value>
+  </data>
   <data name="Give" xml:space="preserve">
     <value>Выдать</value>
   </data>
+  <data name="IncorrectInput" xml:space="preserve">
+    <value>Некорректный ввод</value>
+  </data>
   <data name="LoadCassete" xml:space="preserve">
     <value>Загрузить кассеты</value>
+  </data>
+  <data name="MoneyCount" xml:space="preserve">
+    <value>Количество купюр: </value>
+  </data>
+  <data name="MoneyValue" xml:space="preserve">
+    <value>Номинал купюры: </value>
+  </data>
+  <data name="NoMoneyToGive" xml:space="preserve">
+    <value> В банкомате закончились купюры. Загрузите их или восспользуйтесь другим банкоматом</value>
+  </data>
+  <data name="PleaseLoadCassete" xml:space="preserve">
+    <value>Пожалуйста,загрузите кассеты</value>
+  </data>
+  <data name="StartBankProcess" xml:space="preserve">
+    <value>Начало работы с банкоматом</value>
+  </data>
+  <data name="SuccessfullyIssued" xml:space="preserve">
+    <value> Успешно выдано: </value>
+  </data>
+  <data name="WantMoreThanHave" xml:space="preserve">
+    <value>Недостаточно средств для выдачи данной суммы</value>
   </data>
 </root>

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using log4net;
 
@@ -9,7 +8,7 @@ namespace Bank
     {
         public static readonly ILog Log = LogManager.GetLogger(typeof(LoadCassete));
         StateOpeartion _state;
-        public List<Money> ReadAllMoney(List<Money> allMoney, StateOpeartion stateBank)
+        public List<Money> TxtReader(List<Money> allMoney, StateOpeartion stateBank)
         {
             _state = stateBank;
             var file = new StreamReader("C:/Users/Кривичанин/Documents/Visual Studio 2012/Projects/Bank/MoneyFile.txt");
@@ -20,7 +19,7 @@ namespace Bank
                 while ((element = file.ReadLine()) != null)
                 {
 
-                    var split = element.Split(new char[] { ' ', '\t' });
+                    var split = element.Split(' ', '\t');
 
                     var m1 = new Money
                     {
@@ -31,7 +30,7 @@ namespace Bank
 
                     allMoney.Add(m1);
                 }
-                allMoney.Sort((a, B) => B.MoneyValue.CompareTo(a.MoneyValue));
+                allMoney.Sort((a, b) => b.MoneyValue.CompareTo(a.MoneyValue));
             }
             catch
             {

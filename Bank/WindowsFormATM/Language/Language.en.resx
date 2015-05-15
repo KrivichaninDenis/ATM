@@ -117,6 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AllOk" xml:space="preserve">
+    <value>All Ok</value>
+  </data>
+  <data name="CanNotGiveThisCombination" xml:space="preserve">
+    <value>Can Not Give This Combination</value>
+  </data>
+  <data name="CasseteProblem" xml:space="preserve">
+    <value>Cassete Problem</value>
+  </data>
+  <data name="CassettesSuccessfullyCleared" xml:space="preserve">
+    <value> Cassettes Successfully Cleared</value>
+  </data>
+  <data name="CassettesSuccessfullyLoaded" xml:space="preserve">
+    <value> Cassettes Successfully Loaded</value>
+  </data>
   <data name="Clear" xml:space="preserve">
     <value>Clear</value>
   </data>
@@ -124,12 +139,39 @@
     <value>Clear All</value>
   </data>
   <data name="ClearCassete" xml:space="preserve">
-    <value>Clear Cassete</value>
+    <value>Clear Cassette</value>
+  </data>
+  <data name="EndBankProcess" xml:space="preserve">
+    <value>End Bank Process</value>
   </data>
   <data name="Give" xml:space="preserve">
     <value>Give</value>
   </data>
+  <data name="IncorrectInput" xml:space="preserve">
+    <value>Incorrect Input</value>
+  </data>
   <data name="LoadCassete" xml:space="preserve">
-    <value>Load Cassete</value>
+    <value>Load Cassette</value>
+  </data>
+  <data name="MoneyCount" xml:space="preserve">
+    <value>Money Count: </value>
+  </data>
+  <data name="MoneyValue" xml:space="preserve">
+    <value>Money Value: </value>
+  </data>
+  <data name="NoMoneyToGive" xml:space="preserve">
+    <value> The ATM ran out of money. Use another machine or Load Cassette</value>
+  </data>
+  <data name="PleaseLoadCassete" xml:space="preserve">
+    <value>Please Load Cassete</value>
+  </data>
+  <data name="StartBankProcess" xml:space="preserve">
+    <value>Start Bank Process</value>
+  </data>
+  <data name="SuccessfullyIssued" xml:space="preserve">
+    <value> Successfully Issued: </value>
+  </data>
+  <data name="WantMoreThanHave" xml:space="preserve">
+    <value>Want More Than Have</value>
   </data>
 </root>
