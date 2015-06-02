@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Bank;
 using log4net;
 using log4net.Config;
@@ -9,73 +10,56 @@ namespace ConsoleUI
     {
 
         public static readonly ILog Log = LogManager.GetLogger(typeof(Program));
+        public static bool  Flag=true;
+
 
         public static void Main()
         {
             XmlConfigurator.Configure();
-            Log.Debug("Start Bank Process");
+           
 
-            var atm = new Bank.Bank();
-            var loadCassete = new LoadCassete();
-            var algToGiveMoney = new Algorithm();
-            var state = StateOpeartion.AllOk;
-            atm.ReadCassete(loadCassete, state);
+            string[] comands = {"Help", "Load","Give", "Clear", "Out","Exit","Localization","Show"};
 
-            state = loadCassete.CheckState();
-            if (state == StateOpeartion.AllOk)
+            
+            string path = "C:/Users/Кривичанин/Documents/Visual Studio 2012/Projects/Bank/MoneyFile.txt";
+          
+
+            Functions.State =StateOpeartion.AllOk;// Functions.LoadCassete.CheckState();
+            if (Functions.State == StateOpeartion.AllOk)
             {
-                foreach (var m1 in atm.AllCassete)
-                {
-                    Console.WriteLine("Money Value: " + m1.MoneyValue + " Money Count: " + m1.MoneyCount + "\n");
-                }
-                while (algToGiveMoney.MaxMoney(atm.AllCassete) != 0)
+                
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.BackgroundColor=ConsoleColor.Blue;
+                Console.WriteLine(@"-------Input Help to see functional-------");
+                Console.BackgroundColor = ConsoleColor.Black;
+                while (Flag)
                 {
                     try
                     {
-                        Console.WriteLine(@"Input money: ");
-                        var s = Console.ReadLine();
-                        if (string.IsNullOrEmpty(s)) continue;
-                        var inputMoney = int.Parse(s);
-                        var copyIputMoney = inputMoney;
-                        if (atm.GiveClientMoney(algToGiveMoney, out state, inputMoney) == 0)
+                        Console.WriteLine(@"");
+                        var command = Console.ReadLine();
+                        if (!comands.Contains(command))
                         {
-                            state = StateOpeartion.AllOk;
-                            Console.WriteLine(state + " Successfully issued: " + copyIputMoney);
-                            Log.Info("Successfully issued: "+copyIputMoney);
+                            Console.WriteLine("Bad request!!!");                            
                         }
                         else
                         {
-                            if (state == StateOpeartion.WantMoreThanHave)
-                            {                                
-                                Console.WriteLine("Error: " + state+" ("+copyIputMoney+")");
-                                Log.Error(" Error: " + state + " (" + copyIputMoney + ")");
-                            }
-                            else
-                            {
-                                state = StateOpeartion.CanNotGiveThisCombination;
-                                Console.WriteLine("Error: " + state + " (" + copyIputMoney + ")");
-                                Log.Error(" Error: " + state + " (" + copyIputMoney + ")");
-                            }                            
+                            Functions.MakeFunction(command);
                         }
                     }
                     catch
                     {
-                        state = StateOpeartion.IncorrectInput;
-                        Console.WriteLine(@"Exception " + state);
-                        Log.Error("Exception " + state + "\n");
+                        // ignored
                     }
                 }
-                state = StateOpeartion.NoMoneyToGive;
-                Console.WriteLine(@"Exception " + state);
-                Log.Error("Exception " + state + "\n");
             }
-            else
-            {
-                state = StateOpeartion.CasseteProblem;
-                Console.WriteLine(@"Exception " + state);
-                Log.Error("Exception " + state + "\n");
-            }
-            Log.Debug("End Bank Process");
         }
+
+        /*
+                        
+                        
+        }*/
+
+        
     }
 }

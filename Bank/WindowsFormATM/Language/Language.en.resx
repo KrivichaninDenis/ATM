@@ -150,6 +150,9 @@
   <data name="IncorrectInput" xml:space="preserve">
     <value>Incorrect Input</value>
   </data>
+  <data name="INFO" xml:space="preserve">
+    <value>INFO</value>
+  </data>
   <data name="LoadCassete" xml:space="preserve">
     <value>Load Cassette</value>
   </data>
@@ -173,5 +176,17 @@
   </data>
   <data name="WantMoreThanHave" xml:space="preserve">
     <value>Want More Than Have</value>
+  </data>
+  <data name="Hide" xml:space="preserve">
+    <value>Hide</value>
+  </data>
+  <data name="MaxValue" xml:space="preserve">
+    <value>Max Value</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>Statistics</value>
   </data>
 </root>

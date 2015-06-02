@@ -2,7 +2,7 @@
 {
    public  class Money
     {
-       public int MoneyValue;
-       public int MoneyCount;
+        public int MoneyValue { get; set; }
+        public int MoneyCount { get; set; }
     }
 }

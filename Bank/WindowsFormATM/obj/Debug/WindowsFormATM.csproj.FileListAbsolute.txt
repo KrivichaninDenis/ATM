@@ -16,3 +16,5 @@ C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\Windows
 C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\WindowsFormATM\obj\Debug\ru\WindowsFormATM.resources.dll
 C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\WindowsFormATM\obj\Debug\en\WindowsFormATM.resources.dll
 C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\WindowsFormATM\bin\Debug\Bank.dll
+C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\WindowsFormATM\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Кривичанин\Documents\Visual Studio 2012\Projects\Bank\WindowsFormATM\bin\Debug\Newtonsoft.Json.xml

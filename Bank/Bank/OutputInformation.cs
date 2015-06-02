@@ -9,6 +9,9 @@
         public string SuccessfullyIssued;
         public string MoneyValue;
         public string MoneyCount;
+        public string MaxValue;
+        public string Show;
+        public string Hide;
         public string CassettesSuccessfullyLoaded;
         public string CassettesSuccessfullyCleared;
                      

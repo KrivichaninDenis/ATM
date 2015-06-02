@@ -1,7 +1,20 @@
-2015-05-12 18:02:42,458  [DEBUG] ConsoleUI.Program  - Start Bank Process
-2015-05-12 18:02:44,334  [ERROR] ConsoleUI.Program  -  Error: WantMoreThanHave (500)
-2015-05-12 18:02:48,145  [INFO] ConsoleUI.Program  - Successfully issued: 300
-2015-05-12 18:02:50,974  [INFO] ConsoleUI.Program  - Successfully issued: 70
-2015-05-12 18:02:50,974  [ERROR] ConsoleUI.Program  - Exception NoMoneyToGive
+2015-05-27 07:57:09,568  [INFO] ConsoleUI.Functions  - Use HELP
+2015-05-27 07:57:19,584  [DEBUG] ConsoleUI.Functions  - Start Bank process
+2015-05-27 07:57:51,086  [ERROR] ConsoleUI.Functions  -  Error: WantMoreThanHave (5000)
+2015-05-27 07:58:00,836  [ERROR] ConsoleUI.Functions  -  Error: CanNotGiveThisCombination (30)
+2015-05-27 07:58:07,493  [INFO] ConsoleUI.Functions  - End Bank Process
+2015-05-27 08:29:37,749  [INFO] ConsoleUI.Functions  - Use HELP
+2015-05-27 08:29:46,703  [ERROR] ConsoleUI.Functions  - Exception NoMoneyToGive
 
-2015-05-12 18:02:50,974  [DEBUG] ConsoleUI.Program  - End Bank Process
+2015-05-27 08:29:48,546  [DEBUG] ConsoleUI.Functions  - Start Bank process
+2015-05-27 08:30:11,469  [INFO] ConsoleUI.Functions  - Successfully issued: 300
+2015-05-27 08:30:51,250  [INFO] ConsoleUI.Functions  - Use HELP
+2015-05-27 08:30:53,797  [INFO] ConsoleUI.Functions  - End Bank Process
+2015-05-27 08:47:35,564  [INFO] ConsoleUI.Functions  - Use HELP
+2015-05-27 08:47:38,158  [DEBUG] ConsoleUI.Functions  - Start Bank process
+2015-05-27 08:48:38,363  [INFO] ConsoleUI.Functions  - Successfully issued: 70
+2015-05-27 08:49:08,583  [DEBUG] ConsoleUI.Functions  - Start Bank process
+2015-05-27 08:49:32,591  [INFO] ConsoleUI.Functions  - Successfully issued: 70
+2015-05-27 08:52:13,757  [DEBUG] ConsoleUI.Functions  - Start Bank process
+2015-05-27 08:52:20,007  [INFO] ConsoleUI.Functions  - Successfully issued: 100
+2015-05-27 08:52:24,241  [INFO] ConsoleUI.Functions  - Successfully issued: 70

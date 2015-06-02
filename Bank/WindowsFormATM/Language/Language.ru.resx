@@ -150,6 +150,9 @@
   <data name="IncorrectInput" xml:space="preserve">
     <value>Некорректный ввод</value>
   </data>
+  <data name="INFO" xml:space="preserve">
+    <value>Информация</value>
+  </data>
   <data name="LoadCassete" xml:space="preserve">
     <value>Загрузить кассеты</value>
   </data>
@@ -173,5 +176,17 @@
   </data>
   <data name="WantMoreThanHave" xml:space="preserve">
     <value>Недостаточно средств для выдачи данной суммы</value>
+  </data>
+  <data name="Hide" xml:space="preserve">
+    <value>Скрыть</value>
+  </data>
+  <data name="MaxValue" xml:space="preserve">
+    <value>Макисмальная сумма</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>Показать</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>Статистика</value>
   </data>
 </root>
